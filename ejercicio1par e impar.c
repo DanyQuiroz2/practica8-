@@ -1,31 +1,28 @@
 //practica 8, Daniela Quiroz//
 
 #include <stdio.h>
-#include <math.h>
 
-#include <stdio.h>
-
-int main() {
-    int n, i;
-    int ultimoPar, ultimoImpar;
-
-    printf("Ingresa el valor de n: ");
+void main()
+{
+    int par = 0, impar = 0,n,cont=1;
+    printf("dame el numero de cifras a buscar:");
     scanf("%d", &n);
-
-    printf("Primeros %d números pares: ", n);
-    for (i = 1; i <= n; i++) {
-        ultimoPar = 2 * i;  
-        printf("%d ", ultimoPar);
+    printf("\nuso del while\n");
+    
+    while (cont<=n)
+    {
+        if(cont%2==0)
+        {
+            par=cont;
+        }
+        else
+        {
+            impar=cont;
+        }
+        cont++;
     }
+printf("el ultimo numero par es: %d\n",par);
+printf("el ultimo numero impar es:%d\n",impar);
 
-    printf("\nPrimeros %d números impares: ", n);
-    for (i = 0; i < n; i++) {
-        ultimoImpar = 2 * i + 1; 
-        printf("%d ", ultimoImpar);
-    }
-
-    printf("\nÚltimo número par: %d\n", ultimoPar);
-    printf("Último número impar: %d\n", ultimoImpar);
-
-    return 0;
+printf("\nuso del do-while\n");
 }
